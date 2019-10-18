@@ -1,10 +1,14 @@
-#pragma once
+#ifndef LOGGERAPI_H__INCLUDED
+#define LOGGERAPI_H__INCLUDED
+#endif
+
 #include "iloggerapi.h"
+
 class CLoggerApi : public ILoggerApi
 {
 public:
-	CLoggerApi();
-	~CLoggerApi();
+	CLoggerApi() {};
+	virtual ~CLoggerApi() {};
 	virtual void WriteMessage() override;
 	virtual void DeleteInstance() override;
 };

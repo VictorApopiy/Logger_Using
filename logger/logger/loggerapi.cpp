@@ -2,16 +2,6 @@
 #include <stdio.h>
 #include "loggerapi.h"
 
-CLoggerApi::CLoggerApi()
-{
-
-}
-
-CLoggerApi::~CLoggerApi()
-{
-
-}
-
 void CLoggerApi::WriteMessage()
 {
 	printf("Hello, World! \n");
