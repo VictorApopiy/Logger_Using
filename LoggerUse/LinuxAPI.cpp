@@ -8,7 +8,7 @@
 void* LoadDll(const char* pDllName, int& iResult)
 {
 	std::string dllNameStr = const_cast<char*>(pDllName);;
-	dllNameStr = dllNameStr + ".dll";
+	dllNameStr = dllNameStr + ".so";
 	void* pDllHandler = dlopen(dllNameStr.c_str());
 	if (pDllHandler != NULL)
 	{
