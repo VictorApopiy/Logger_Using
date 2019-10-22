@@ -1,4 +1,4 @@
-#ifndef OS_API_H__INCLUDEd
+#ifndef OS_API_H__INCLUDED
 #define OS_API_H__INCLUDED
 #endif
 
