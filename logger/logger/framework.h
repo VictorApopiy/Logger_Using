@@ -1,5 +1,5 @@
-#pragma once
-
-#define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
-// Windows Header Files
-#include <windows.h>
+#ifdef _WIN32
+#include <Windows.h>
+#elif defined __linux
+#include <dlfcn.h>
+#endif

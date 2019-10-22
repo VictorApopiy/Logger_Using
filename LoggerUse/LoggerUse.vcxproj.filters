@@ -18,12 +18,12 @@
     <ClCompile Include="LoggerUse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OS_API.cpp">
+    <ClCompile Include="osApi.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="OS_API.h">
+    <ClInclude Include="OsApi.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,11 +1,7 @@
-#include "pch.h"
 #include <stdio.h>
 #include "loggerapi.h"
-#if defined(LOGGERAPI_H__INCLUDED)
-#define LOGGERAPI __declspec(dllexport)
-#else
-#define LOGGERAPI __declspec(dllimport)
-#endif
+#include "loggerApiDecl.h"
+
 void CLoggerApi::WriteMessage()
 {
 	printf("Hello, World! \n");

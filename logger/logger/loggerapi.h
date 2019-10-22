@@ -1,6 +1,5 @@
 #ifndef LOGGERAPI_H__INCLUDED
 #define LOGGERAPI_H__INCLUDED
-#endif
 
 #include "iloggerapi.h"
 
@@ -12,3 +11,4 @@ public:
 	virtual void WriteMessage() override;
 	virtual void DeleteInstance() override;
 };
+#endif

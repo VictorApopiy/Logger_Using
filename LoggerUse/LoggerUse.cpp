@@ -2,27 +2,30 @@
 //
 #include <stdio.h>
 #include "iloggerapi.h"
-#include "OS_API.h"
+#include "OsApi.h"
 
 int main()
 {
 	do
 	{
-		int iResult = 0;
-		void* pDllHandler = LoadDll("logger", iResult);
-		IloggerApi_factory LoggerApiInit = reinterpret_cast<IloggerApi_factory>(GetFuncPtr(pDllHandler, "CreateLogger", iResult));
-		ILoggerApi* pinstance = LoggerApiInit();
-		if (pinstance == NULL)
+		void* pDllHandler = LoadDll("logger");
+		ILoggerApiFactory LoggerApiInit = reinterpret_cast<ILoggerApiFactory>(GetFuncPtr(pDllHandler, "CreateLogger"));
+		if (LoggerApiInit != NULL)
 		{
-			printf("LoggerAppInit returned nullptr \n");
-			break;
+			ILoggerApi* pInstance = LoggerApiInit();
+			if (pInstance == NULL)
+			{
+				printf("LoggerAppInit returned nullptr \n");
+				break;
+			}
+			pInstance->WriteMessage();
+			pInstance->DeleteInstance();
+			pInstance = NULL;
+			FreeDll(pDllHandler);
+			return 0;
 		}
-		pinstance->WriteMessage();
-		pinstance->DeleteInstance();
-		pinstance = NULL;
-		FreeDll(pDllHandler, iResult);
-		return iResult;
 	} 
-	while (true);
+	while (false);
+	return 1;
 }
 
