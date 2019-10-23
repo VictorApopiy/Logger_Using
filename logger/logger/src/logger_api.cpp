@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "loggerapi.h"
-#include "loggerApiDecl.h"
+#include "logger_api.h"
+#include "logger_api_decl.h"
 
 void CLoggerApi::WriteMessage()
 {

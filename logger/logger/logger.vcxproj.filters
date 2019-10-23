@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\loggerapi.h">
+    <ClInclude Include="include\logger_api_decl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\loggerApiDecl.h">
+    <ClInclude Include="include\logger_api.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\loggerapi.cpp">
+    <ClCompile Include="src\logger_api.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

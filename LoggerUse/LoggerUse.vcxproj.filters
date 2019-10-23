@@ -15,21 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\OsApi.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\Shared\include\framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Shared\include\iloggerapi.h">
+    <ClInclude Include="include\os_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\include\ilogger_api.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\osApi.cpp">
+    <ClCompile Include="src\os_api.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\LoggerUse.cpp">
+    <ClCompile Include="src\logger_use.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,7 +1,7 @@
 #ifndef _LOGGERAPI_H__INCLUDED_
 #define _LOGGERAPI_H__INCLUDED_
 
-#include "iloggerapi.h"
+#include "ilogger_api.h"
 
 class CLoggerApi : public ILoggerApi
 {

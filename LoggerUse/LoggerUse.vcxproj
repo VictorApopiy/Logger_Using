@@ -157,12 +157,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\Shared\include\framework.h" />
-    <ClInclude Include="..\Shared\include\iloggerapi.h" />
-    <ClInclude Include="include\OsApi.h" />
+    <ClInclude Include="..\Shared\include\ilogger_api.h" />
+    <ClInclude Include="include\os_api.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\LoggerUse.cpp" />
-    <ClCompile Include="src\osApi.cpp" />
+    <ClCompile Include="src\logger_use.cpp" />
+    <ClCompile Include="src\os_api.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

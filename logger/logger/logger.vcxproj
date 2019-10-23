@@ -160,11 +160,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="include\loggerapi.h" />
-    <ClInclude Include="include\loggerApiDecl.h" />
+    <ClInclude Include="include\logger_api.h" />
+    <ClInclude Include="include\logger_api_decl.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\loggerapi.cpp" />
+    <ClCompile Include="src\logger_api.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
