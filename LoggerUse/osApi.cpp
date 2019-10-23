@@ -11,13 +11,13 @@ void* LoadDll(const char* pDllName)
 		if (pDllName != NULL)
 		{
 #ifdef _WIN32
-			std::string dllNameStr = const_cast<char*>(pDllName);
-			dllNameStr = dllNameStr + ".dll";
-			HINSTANCE pDllHandler = LoadLibrary(dllNameStr.c_str());
+			std::string sDllName = const_cast<char*>(pDllName);
+			sDllName = sDllName + ".dll";
+			HINSTANCE pDllHandler = LoadLibrary(sDllName.c_str());
 #elif defined __linux
-			std::string dllNameStr = const_cast<char*>(pDllName);;
-			dllNameStr = dllNameStr + ".so";
-			void* pDllHandler = dlopen(dllNameStr.c_str());
+			std::string sDllName = const_cast<char*>(pDllName);;
+			sDllName = sDllName + ".so";
+			void* pDllHandler = dlopen(sDllName.c_str());
 #endif
 
 			if (pDllHandler != NULL)

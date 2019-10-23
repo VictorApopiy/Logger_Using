@@ -1,5 +1,5 @@
-#ifndef ILOGGERAPI_H__INCLUDED
-#define ILOGGERAPI_H__INCLUDED
+#ifndef _ILOGGERAPI_H__INCLUDED_
+#define _ILOGGERAPI_H__INCLUDED_
 class ILoggerApi
 {
 public:
@@ -9,4 +9,4 @@ public:
 	virtual void DeleteInstance() = 0;
 };
 typedef ILoggerApi* (__cdecl* ILoggerApiFactory)();
-#endif
+#endif // _ILOGGERAPI_H__INCLUDED_

@@ -1,5 +1,5 @@
-#ifndef OS_API_H__INCLUDED
-#define OS_API_H__INCLUDED
+#ifndef _OS_API_H__INCLUDED_
+#define _OS_API_H__INCLUDED_
 #endif
 
 void* LoadDll(const char* pDllName);
