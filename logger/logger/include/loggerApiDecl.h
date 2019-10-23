@@ -1,4 +1,4 @@
-#if defined(_LOGGERAPI_H__INCLUDED_)
+#if defined(EXPORT_LOGGER)
 #define LOGGERAPI __declspec(dllexport)
 #else
 #define LOGGERAPI __declspec(dllimport)

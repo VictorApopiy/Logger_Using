@@ -1,5 +1,6 @@
 #ifndef _ILOGGERAPI_H__INCLUDED_
 #define _ILOGGERAPI_H__INCLUDED_
+#define EXPORT_LOGGER
 class ILoggerApi
 {
 public:
