@@ -8,8 +8,8 @@ int main()
 {
 	do
 	{
-		void* pDllHandler = LoadDll("logger");
-		ILoggerApiFactory LoggerApiInit = reinterpret_cast<ILoggerApiFactory>(GetFuncPtr(pDllHandler, "CreateLogger"));
+		void* pDllHandler = CDllWorkFuncs::LoadDll("logger");
+		ILoggerApiFactory LoggerApiInit = reinterpret_cast<ILoggerApiFactory>(CDllWorkFuncs::GetFuncPtr(pDllHandler, "CreateLogger"));
 		if (LoggerApiInit != NULL)
 		{
 			ILoggerApi* pInstance = LoggerApiInit();
@@ -21,7 +21,7 @@ int main()
 			pInstance->WriteMessage();
 			pInstance->DeleteInstance();
 			pInstance = NULL;
-			FreeDll(pDllHandler);
+			CDllWorkFuncs::FreeDll(pDllHandler);
 			return 0;
 		}
 	} 

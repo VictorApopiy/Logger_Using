@@ -4,7 +4,7 @@
 #include "OsApi.h"
 #include "framework.h"
 
-void* LoadDll(const char* pDllName)
+void* CDllWorkFuncs::LoadDll(const char* pDllName)
 {
 	do
 	{
@@ -40,7 +40,7 @@ void* LoadDll(const char* pDllName)
 		return NULL;
 }
 
-void* GetFuncPtr(void* pDllHandler, const char* FuncName)
+void* CDllWorkFuncs::GetFuncPtr(void* pDllHandler, const char* FuncName)
 {
 	do
 	{
@@ -75,7 +75,7 @@ void* GetFuncPtr(void* pDllHandler, const char* FuncName)
 	} while (false);
 		return NULL;
 }
-void FreeDll(void* pDllHandler)
+void CDllWorkFuncs::FreeDll(void* pDllHandler)
 {
 	if (pDllHandler != NULL)
 	{
