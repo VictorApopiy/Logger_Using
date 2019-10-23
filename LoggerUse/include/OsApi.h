@@ -1,6 +1,5 @@
 #ifndef _OS_API_H__INCLUDED_
 #define _OS_API_H__INCLUDED_
-#endif
 
 namespace CDllWorkFuncs
 {
@@ -8,3 +7,4 @@ namespace CDllWorkFuncs
 	void* GetFuncPtr(void* pDllHandler, const char* FuncName);
 	void FreeDll(void* pDllHandler);
 }
+#endif // _OS_API_H__INCLUDED_
