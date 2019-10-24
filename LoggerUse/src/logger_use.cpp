@@ -33,7 +33,7 @@ int main()
 			printf("pinstance returned NULL \n");
 			break;
 		}
-		pInstance->WriteMessage();
+		pInstance->WriteMessage("%s  %s  %s   %s   %s \n", "aa", "bb", "cc", "dd", "ee");
 		pInstance->DeleteInstance();
 		pInstance = NULL;
 	} 

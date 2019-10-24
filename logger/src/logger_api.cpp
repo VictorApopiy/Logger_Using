@@ -1,10 +1,14 @@
 #include <stdio.h>
+#include <stdarg.h>
 #include "logger_api.h"
 #include "logger_api_decl.h"
 
-void CLoggerApi::WriteMessage()
+void CLoggerApi::WriteMessage(const char* pFormat, ...)
 {
-	printf("Hello, World! \n");
+	va_list pArgList;
+	va_start(pArgList, pFormat);
+	vprintf(pFormat, pArgList);
+	va_end(pArgList);
 }
 
 void CLoggerApi::DeleteInstance()

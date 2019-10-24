@@ -6,7 +6,7 @@ class ILoggerApi
 public:
 	ILoggerApi() {};
 	virtual ~ILoggerApi() {};
-	virtual void WriteMessage() = 0;
+	virtual void WriteMessage(const char* pFormat, ...) = 0;
 	virtual void DeleteInstance() = 0;
 };
 typedef ILoggerApi* (__cdecl PtrFunc_CreateLogger)();
