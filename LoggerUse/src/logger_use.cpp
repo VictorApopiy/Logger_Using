@@ -21,13 +21,13 @@ int main()
 			printf("LoggerCreator returned NULL \n");
 			break;
 		}
-		PtrFunc_CreateLogger* pLoggerApiInit = reinterpret_cast<PtrFunc_CreateLogger*>(pLoggerCreator);
-		if (pLoggerApiInit == NULL)
+		PtrFunc_CreateLogger pFunc_LoggerApiInit = reinterpret_cast<PtrFunc_CreateLogger>(pLoggerCreator);
+		if (pFunc_LoggerApiInit == NULL)
 		{
 			printf("LoggerAppInit returned NULL \n");
 			break;
 		}
-		ILoggerApi* pInstance = pLoggerApiInit();
+		ILoggerApi* pInstance = pFunc_LoggerApiInit();
 		if (pInstance == NULL)
 		{
 			printf("pinstance returned NULL \n");

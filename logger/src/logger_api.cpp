@@ -4,11 +4,11 @@
 #include "logger_api.h"
 #include "logger_api_decl.h"
 
-void CLoggerApi::WriteMessage(const char* pFormat, ...)
+void CLoggerApi::WriteMessage(const char* szcFormat, ...)
 {
 	va_list pArgList;
-	va_start(pArgList, pFormat);
-	vprintf(pFormat, pArgList);
+	va_start(pArgList, szcFormat);
+	vprintf(szcFormat, pArgList);
 	va_end(pArgList);
 }
 
@@ -19,13 +19,5 @@ void CLoggerApi::DeleteInstance()
 
 extern "C" LOGGERAPI ILoggerApi * __cdecl CreateLogger()
 {
-	try 
-	{
-		return new CLoggerApi();
-	}
-	catch (const std::bad_alloc&) 
-	{
-		printf("Allocation failed \n");
-		return NULL;
-	}
+	return new(std::nothrow) CLoggerApi();
 }
