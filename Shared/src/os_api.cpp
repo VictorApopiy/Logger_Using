@@ -1,7 +1,7 @@
+#include "framework.h"
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include "framework.h"
 #include "os_api.h"
 #ifdef _WIN32
 #define LIBRARY_EXTENSION ".dll"

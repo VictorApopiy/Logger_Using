@@ -21,15 +21,15 @@
     <ClInclude Include="..\..\Shared\include\ilogger_api.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\os_api.h">
+    <ClInclude Include="..\..\Shared\include\os_api.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\os_api.cpp">
+    <ClCompile Include="..\src\logger_use.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\logger_use.cpp">
+    <ClCompile Include="..\..\Shared\src\os_api.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
