@@ -9,7 +9,7 @@ int main()
 	void* pDllHandler = NULL;
 	do
 	{
-		pDllHandler = DllWorkFuncs::LoadDll("logger");
+		pDllHandler = DllWorkFuncs::LoadDll("liblogger");
 		if (pDllHandler == NULL)
 		{
 			printf("Dll is not loaded \n");

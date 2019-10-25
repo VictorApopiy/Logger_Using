@@ -24,7 +24,7 @@ void* DllWorkFuncs::LoadDll(const char* szcDllName)
 #ifdef _WIN32
 		pDllHandler = static_cast<void*>(LoadLibrary(sDllName.c_str()));
 #elif defined __linux
-		pDllHandler = dlopen(sDllName.c_str());
+		pDllHandler = dlopen(sDllName.c_str(), RTLD_NOW);
 #endif
 		if (pDllHandler == NULL)
 		{
@@ -55,7 +55,7 @@ void* DllWorkFuncs::GetFuncPtr(void* pDllHandler, const char* szcFuncName)
 #ifdef _WIN32
 		pFuncptr = reinterpret_cast<void*>(GetProcAddress(reinterpret_cast<HINSTANCE>(pDllHandler), szcFuncName));
 #elif defined __linux
-		pFuncptr = dlsym(pDllHandler, FuncName);
+		pFuncptr = dlsym(pDllHandler, szcFuncName);
 #endif
 		if (pFuncptr == NULL)
 		{

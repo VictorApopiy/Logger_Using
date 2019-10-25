@@ -17,7 +17,7 @@ void CLoggerApi::DeleteInstance()
 	delete this;
 }
 
-LOGGERAPI ILoggerApi * __cdecl CreateLogger()
+LOGGERAPI ILoggerApi * CreateLogger()
 {
 	return new(std::nothrow) CLoggerApi();
 }
